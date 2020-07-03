@@ -30,7 +30,7 @@ class ExceptionDispatchTest extends IntegrationTestCase
         }
     }
 
-    public function testNeo4jStatusCodeIsAvalailble()
+    public function testNeo4jStatusCodeIsAvailable()
     {
         try {
             $this->getSession()->run("CR");
@@ -134,7 +134,7 @@ class ExceptionDispatchTest extends IntegrationTestCase
         $this->assertEquals(2, $results->size());
     }
 
-    public function testConstraintViolationInTransaction()
+    public function testConstraintViolationInPipeline()
     {
         $this->emptyDB();
         $session = $this->getSession();

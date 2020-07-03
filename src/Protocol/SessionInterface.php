@@ -11,9 +11,9 @@
 
 namespace PTS\Bolt\Protocol;
 
-use GraphAware\Common\Driver\PipelineInterface;
-use GraphAware\Common\Driver\SessionInterface as BaseSessionInterface;
+use PTS\Bolt\Protocol\PipelineInterface;
 use GraphAware\Common\Transaction\TransactionInterface;
+use GraphAware\Common\Driver\SessionInterface as BaseSessionInterface;
 
 interface SessionInterface extends BaseSessionInterface
 {
