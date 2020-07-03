@@ -4,9 +4,9 @@ namespace PTS\Bolt\Protocol;
 
 class PipelineMessage
 {
-    private string $statement;
-    private array $parameters;
-    private ?string $tag;
+    private $statement;
+    private $parameters;
+    private $tag;
 
     public function __construct(string $statement, array $parameters, ?string $tag)
     {
