@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b2fde15dae900aa8f3f624142a79d4c",
+    "content-hash": "96bc0cff109ae4a88898eee777f11a5a",
     "packages": [
         {
             "name": "graphaware/neo4j-common",
@@ -99,38 +99,150 @@
             "time": "2020-02-14T08:15:52+00:00"
         },
         {
-            "name": "symfony/event-dispatcher",
-            "version": "4.4.x-dev",
+            "name": "psr/event-dispatcher",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "a5370aaa7807c7a439b21386661ffccf3dff2866"
+                "url": "https://github.com/php-fig/event-dispatcher.git",
+                "reference": "3b1c10727b12ecdfc7b80b040b887a94c64d8388"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a5370aaa7807c7a439b21386661ffccf3dff2866",
-                "reference": "a5370aaa7807c7a439b21386661ffccf3dff2866",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/3b1c10727b12ecdfc7b80b040b887a94c64d8388",
+                "reference": "3b1c10727b12ecdfc7b80b040b887a94c64d8388",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.3",
-                "symfony/event-dispatcher-contracts": "^1.1"
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\EventDispatcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Standard interfaces for event handling.",
+            "keywords": [
+                "events",
+                "psr",
+                "psr-14"
+            ],
+            "time": "2020-05-26T00:50:43+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "5e20b83385a77593259c9f8beb2c43cd03b2ac14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/5e20b83385a77593259c9f8beb2c43cd03b2ac14",
+                "reference": "5e20b83385a77593259c9f8beb2c43cd03b2ac14",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-06T08:49:21+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "04039530ba77586eaf125de98c63315387190e5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/04039530ba77586eaf125de98c63315387190e5b",
+                "reference": "04039530ba77586eaf125de98c63315387190e5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1",
+                "symfony/event-dispatcher-contracts": "^2",
+                "symfony/polyfill-php80": "^1.15"
             },
             "conflict": {
-                "symfony/dependency-injection": "<3.4"
+                "symfony/dependency-injection": "<4.4"
             },
             "provide": {
                 "psr/event-dispatcher-implementation": "1.0",
-                "symfony/event-dispatcher-implementation": "1.1"
+                "symfony/event-dispatcher-implementation": "2.0"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "^3.4|^4.0|^5.0",
-                "symfony/dependency-injection": "^3.4|^4.0|^5.0",
-                "symfony/expression-language": "^3.4|^4.0|^5.0",
-                "symfony/http-foundation": "^3.4|^4.0|^5.0",
+                "symfony/config": "^4.4|^5.0",
+                "symfony/dependency-injection": "^4.4|^5.0",
+                "symfony/expression-language": "^4.4|^5.0",
+                "symfony/http-foundation": "^4.4|^5.0",
                 "symfony/service-contracts": "^1.1|^2",
-                "symfony/stopwatch": "^3.4|^4.0|^5.0"
+                "symfony/stopwatch": "^4.4|^5.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -139,7 +251,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.4-dev"
+                    "dev-master": "5.2-dev"
                 }
             },
             "autoload": {
@@ -180,33 +292,37 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-20T08:37:50+00:00"
+            "time": "2020-06-18T19:55:03+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v1.1.7",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18"
+                "reference": "f6f613d74cfc5a623fc36294d3451eb7fa5a042b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
-                "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/f6f613d74cfc5a623fc36294d3451eb7fa5a042b",
+                "reference": "f6f613d74cfc5a623fc36294d3451eb7fa5a042b",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": ">=7.2.5",
+                "psr/event-dispatcher": "^1"
             },
             "suggest": {
-                "psr/event-dispatcher": "",
                 "symfony/event-dispatcher-implementation": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "2.1-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -238,7 +354,101 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-09-17T09:54:03+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-07-06T13:23:11+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php80",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "c7bdeabb8ec1964cb74892c8281d79fe31592e74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/c7bdeabb8ec1964cb74892c8281d79fe31592e74",
+                "reference": "c7bdeabb8ec1964cb74892c8281d79fe31592e74",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.17-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-07-03T13:31:43+00:00"
         }
     ],
     "packages-dev": [
@@ -318,12 +528,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "985f414b55eca4296ffc99db960a97b3cc8fbcea"
+                "reference": "cf8df60735d98fd18070b7cab0019ba0831e219c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/985f414b55eca4296ffc99db960a97b3cc8fbcea",
-                "reference": "985f414b55eca4296ffc99db960a97b3cc8fbcea",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/cf8df60735d98fd18070b7cab0019ba0831e219c",
+                "reference": "cf8df60735d98fd18070b7cab0019ba0831e219c",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +569,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2020-04-27T09:34:19+00:00"
+            "time": "2020-06-19T17:42:03+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -367,24 +577,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e"
+                "reference": "eb3320ef010709f339f118dde1645e197c4961ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
-                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/eb3320ef010709f339f118dde1645e197c4961ec",
+                "reference": "eb3320ef010709f339f118dde1645e197c4961ec",
                 "shasum": ""
             },
             "require": {
-                "ext-filter": "^7.1",
-                "php": "^7.2",
-                "phpdocumentor/reflection-common": "^2.0",
-                "phpdocumentor/type-resolver": "^1.0",
-                "webmozart/assert": "^1"
+                "ext-filter": "*",
+                "php": "^7.2 || ^8.0",
+                "phpdocumentor/reflection-common": "^2.2",
+                "phpdocumentor/type-resolver": "^1.3",
+                "webmozart/assert": "^1.9.1"
             },
             "require-dev": {
-                "doctrine/instantiator": "^1",
-                "mockery/mockery": "^1"
+                "mockery/mockery": "~1.3.2"
             },
             "type": "library",
             "extra": {
@@ -412,7 +621,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-02-22T12:28:44+00:00"
+            "time": "2020-07-09T12:42:26+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -420,12 +629,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "95d8782070ccd738295bbe4483f8760f998ad64d"
+                "reference": "94f3ddc5d77e49daadadd33b798b933e52dde82c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/95d8782070ccd738295bbe4483f8760f998ad64d",
-                "reference": "95d8782070ccd738295bbe4483f8760f998ad64d",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/94f3ddc5d77e49daadadd33b798b933e52dde82c",
+                "reference": "94f3ddc5d77e49daadadd33b798b933e52dde82c",
                 "shasum": ""
             },
             "require": {
@@ -458,11 +667,11 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-05-13T13:46:15+00:00"
+            "time": "2020-06-19T19:40:27+00:00"
         },
         {
             "name": "phpspec/prophecy",
-            "version": "dev-master",
+            "version": "v1.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
@@ -1278,12 +1487,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "75ff420b23c0866c99c350099381a93b8602ebe6"
+                "reference": "5b0b6abd089c257a78c30a1d7ccfec12665a55e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/75ff420b23c0866c99c350099381a93b8602ebe6",
-                "reference": "75ff420b23c0866c99c350099381a93b8602ebe6",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5b0b6abd089c257a78c30a1d7ccfec12665a55e2",
+                "reference": "5b0b6abd089c257a78c30a1d7ccfec12665a55e2",
                 "shasum": ""
             },
             "require": {
@@ -1321,7 +1530,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-05-21T06:41:29+00:00"
+            "time": "2020-07-12T22:27:30+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1523,20 +1732,20 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451"
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0",
+                "php": "^5.3.3 || ^7.0 || ^8.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -1568,7 +1777,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-06-16T10:16:42+00:00"
+            "time": "2020-07-08T17:02:28+00:00"
         }
     ],
     "aliases": [],
