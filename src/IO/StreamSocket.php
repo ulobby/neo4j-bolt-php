@@ -103,7 +103,7 @@ class StreamSocket extends AbstractIO
         EventDispatcher $eventDispatcher = null
     ) {
         $context = null;
-        if (null !== $configuration->getValue('bind_to_interface')) {
+        if ('null' !== $configuration->getValue('bind_to_interface')) {
             $context = stream_context_create([
                 'socket' => [
                     'bindto' => $configuration->getValue('bind_to_interface')
